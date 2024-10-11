@@ -95,7 +95,7 @@ public class PostgresqlManager extends SqlManager {
                     // Get Columns values
                     for (int i = 1; i <= columnsNumber; i++) {
                         if (i > 1) cols.append(unitSeparator);
-
+                        LOG.info("Column number/type " + i.toString() + " " + rsmd.getColumnType(i).toString())
                         switch (rsmd.getColumnType(i)) {
 
                             case Types.CLOB:
